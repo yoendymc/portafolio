@@ -13,7 +13,6 @@ function HeroSection() {
             alt={'Yoendy'}
             width={1311}
             height={1314}
-            layout={'responsive'}
           />
         </div>
 
@@ -33,7 +32,7 @@ function HeroSection() {
           </div>
         </a>
       </div>
-      <h1 className='text-5xl font-bold my-4'>Hi, I'm Yoendy</h1>
+      <h1 className='text-5xl font-bold my-4'>{`Hi, I'm Yoendy`}</h1>
       <p
         className={
           'text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300'

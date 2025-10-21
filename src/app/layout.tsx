@@ -1,10 +1,9 @@
 import type { Metadata } from 'next'
-import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { Geist, Geist_Mono } from 'next/font/google'
 
-import TopNav from '@/src/components/TopNav'
 import './globals.css'
-import Rights from '@/src/components/Rights'
+import Footer from '@/src/components/Footer'
+import Header from '@/src/components/Header'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -32,41 +31,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100`}
       >
         {/* Header */}
-        <header className='mt-3 w-full flex justify-center fixed top-0 z-10 '>
-          <TopNav></TopNav>
-        </header>
+        <Header />
         {children}
         {/* Footer */}
-        <footer className='text-center text-sm py-6 bg-white dark:bg-gray-900'>
-          <div className='max-w-4xl mx-auto mt-6 flex flex-col md:flex-row items-center justify-between gap-4'>
-            <Rights />
-
-            <div className='flex items-center gap-4 text-xl'>
-              <a
-                href='https://github.com/yoendymc'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='hover:text-white transition-colors'
-              >
-                <FaGithub />
-              </a>
-              <a
-                href='https://www.linkedin.com/in/yoendymc/'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='hover:text-white transition-colors'
-              >
-                <FaLinkedin />
-              </a>
-              <a
-                href='mailto:yoendymc@gmail.com'
-                className='hover:text-white transition-colors'
-              >
-                <FaEnvelope />
-              </a>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </body>
     </html>
   )
